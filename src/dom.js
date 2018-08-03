@@ -555,7 +555,7 @@ Object.defineProperty(canvas.Image.prototype, "src", {
         url: value,
         encoding: null
       }, function (err, res, body) {
-        if (!this._eventemitter) return
+        if (!_this4._eventemitter) return
         if (err) {
           _this4._eventemitter.emit('error', {
             target: {
@@ -572,13 +572,13 @@ Object.defineProperty(canvas.Image.prototype, "src", {
       process.nextTick(function () {
         _this4._src = _this4.source = value;
 
-        if (!this._eventemitter) return
+        if (!_this4._eventemitter) return
 
         _this4._eventemitter.emit('load');
       });
     } else {
       process.nextTick(function () {
-        if (!this._eventemitter) return
+        if (!_this4._eventemitter) return
 
         _this4._eventemitter.emit('error', {
           target: {
