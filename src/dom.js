@@ -541,6 +541,7 @@ canvas.Image.prototype.addEventListener = function (name, cb) {
 };
 canvas.Image.prototype._src = '';
 Object.defineProperty(canvas.Image.prototype, "src", {
+  configurable: true,
   get: function src() {
     return this._src;
   },
